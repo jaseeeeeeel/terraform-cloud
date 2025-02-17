@@ -1,6 +1,7 @@
 provider "aws" {
 }
-resource "aws_iam_user" "my_user" {
-  count = 0
-  name = "ajaseelkk"
+resource "aws_ec2_instance" "web" {
+  count = 1
+  ami = "ami-123"
+  instance_type = "t2.micrp"
 }
